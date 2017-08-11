@@ -52,6 +52,9 @@ PODS:
     - GoogleToolboxForMac/NSString+URLArguments (= 2.1.1)
   - GoogleToolboxForMac/NSString+URLArguments (2.1.1)
   - GTMSessionFetcher/Core (1.1.10)
+  - Koloda (4.1):
+    - pop (~> 1.0)
+  - pop (1.0.9)
 
 DEPENDENCIES:
   - FBSDKCoreKit
@@ -61,6 +64,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
+  - Koloda
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
@@ -76,7 +80,9 @@ SPEC CHECKSUMS:
   FirebaseStorage: 8110a1ed2034c8fbfd83890d2acc9cdbbd99afec
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 30d874b96d0d76028f61fbd122801e3f030d47db
+  Koloda: 6c4fa3ce9a68776a8ef973311e53fdda432799a8
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
 
-PODFILE CHECKSUM: 943e34579639a2a5f80bfb7c5d22045d1b8db93e
+PODFILE CHECKSUM: 6b83ba2fa1addca2490efade9569f0a4048b4fa1
 
 COCOAPODS: 1.2.1
