@@ -14,15 +14,28 @@ class DateViewController: UIViewController {
     @IBOutlet weak var location: UITextField!
     @IBOutlet weak var dateeName: UILabel!
 
-    var datesName: String?
+    
+    var user: FirebaseUser?
+    var suitorsName: String!
+    var suitorsUid: String!
     let datesRef = Database.database().reference(withPath: "dates")
+    let usersRef = Database.database().reference(withPath: "users")
+    var place: String!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dateeName.text = datesName
+        dateeName.text = user?.name
         
-        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
-        rightSwipe.direction = UISwipeGestureRecognizerDirection.right
+        let userID = Auth.auth().currentUser?.uid
+        usersRef.child(userID!).observeSingleEvent(of: .value, with: { snap in
+            let value = snap.value as? NSDictionary
+            self.suitorsName = value?["name"] as? String ?? ""
+            self.suitorsUid = value?["uid"] as? String ?? ""
+        })
+        
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(self.swipeAction))
+        rightSwipe.direction = .right
         self.view.addGestureRecognizer(rightSwipe)
     }
     
@@ -32,18 +45,19 @@ class DateViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func swipeAction(swipe:UISwipeGestureRecognizer) {
-        switch swipe.direction.rawValue {
-        case 2:
-            performSegue(withIdentifier: "swipeRight", sender: self)
-            //let place = location.text
-            //self.ref.child("users").child(user.uid).setValue(["username": username])
-            //datesRef.child("dates").child(
-        default:
-            break
+    func swipeAction(swipe: UISwipeGestureRecognizer) -> Void {
+        if swipe.direction == UISwipeGestureRecognizerDirection.right {
+            place = location.text
+            print(place)
+            print(suitorsUid)
+            print(suitorsName)
+            self.datesRef.child((self.user?.uid)!).child(suitorsUid).setValue(["location": place, "Suitor's Name": suitorsName, "Suitor's Uid": suitorsUid])
+            self.navigationController?.popViewController(animated: true)
+        }
+        else {
+            return
         }
     }
-    
     
     /*
     // MARK: - Navigation
@@ -58,18 +72,3 @@ class DateViewController: UIViewController {
 }
 
 
-//extension UIViewController {
-//    
-//    func swipeAction(swipe:UISwipeGestureRecognizer) {
-//        switch swipe.direction.rawValue {
-//        case 2:
-//            performSegue(withIdentifier: "swipeRight", sender: self)
-//            
-//            let place = self.DateViewController.location.text
-//            
-//        default:
-//            break
-//        }
-//    }
-//    
-//}

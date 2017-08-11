@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="kvo-kk-Oce">
             <objects>
-                <viewController id="H49-VO-xKC" customClass="ViewController" customModule="FindMyDate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="H49-VO-xKC" customClass="ViewController" customModule="FindMyDate" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WSd-O2-hpL"/>
                         <viewControllerLayoutGuide type="bottom" id="Wt2-5b-Cqc"/>
@@ -74,14 +74,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aSi-SD-zsm">
-                                            <rect key="frame" x="229" y="0.0" width="91" height="90.5"/>
+                                            <rect key="frame" x="228" y="-1" width="91" height="89"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="1" green="0.73039825167751249" blue="0.71974884606193534" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <outlet property="imageHolder" destination="aSi-SD-zsm" id="6FF-9i-Uyl"/>
+                                    <outlet property="picHolder" destination="aSi-SD-zsm" id="x6b-Ha-muW"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -150,29 +150,38 @@
                     <connections>
                         <outlet property="dateeName" destination="UDh-tu-aZl" id="l5G-d7-h0q"/>
                         <outlet property="location" destination="caz-JO-Eqg" id="p6G-Yr-D4V"/>
-                        <segue destination="B9v-3H-Xu1" kind="show" identifier="swipeRight" id="fu2-WN-n2b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XhO-pZ-2tL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="232.5" y="-2350.3521126760565"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Dates-->
         <scene sceneID="n1L-eb-zR7">
             <objects>
-                <tableViewController id="P3y-NX-8w1" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="7pY-gF-7VF">
+                <tableViewController id="P3y-NX-8w1" customClass="MatchesTableViewController" customModule="FindMyDate" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="7pY-gF-7VF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="5sR-Ba-N29">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MatchesTableViewCell" rowHeight="90" id="5sR-Ba-N29" customClass="MatchesTableViewCell" customModule="FindMyDate" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5sR-Ba-N29" id="3uN-fP-xkv">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NaG-NS-vQU">
+                                            <rect key="frame" x="226.5" y="-2" width="91.5" height="91"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </imageView>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.71161370647276045" green="1" blue="0.6472598925333819" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="imageHolder" destination="NaG-NS-vQU" id="hr9-WR-232"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -180,7 +189,7 @@
                             <outlet property="delegate" destination="P3y-NX-8w1" id="y0d-yt-Qaa"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="gYb-Js-aJA"/>
+                    <navigationItem key="navigationItem" title="Dates" id="gYb-Js-aJA"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZCH-aQ-SFm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -225,7 +234,4 @@
             <point key="canvasLocation" x="-1526" y="-1626"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="fu2-WN-n2b"/>
-    </inferredMetricsTieBreakers>
 </document>

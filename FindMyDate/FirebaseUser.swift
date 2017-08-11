@@ -23,4 +23,11 @@ struct FirebaseUser {
         profileURL = authData.photoURL!
     }
     
+    init(uid: String, email: String, name: String, profileURL: URL) {
+        self.uid = uid
+        self.email = email
+        self.name = name
+        self.profileURL = profileURL
+    }
+    
 }

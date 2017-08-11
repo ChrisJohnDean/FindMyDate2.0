@@ -23,6 +23,9 @@
 		8954E3161EFA5A5600197708 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8954E3151EFA5A5600197708 /* UserTableViewCell.swift */; };
 		89A9C9C11F0C307D00381804 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89A9C9C01F0C307D00381804 /* Images.xcassets */; };
 		89A9C9C41F0C5DE500381804 /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A9C9C21F0C3CB900381804 /* DateViewController.swift */; };
+		89A9C9D21F29BE5500381804 /* MatchesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A9C9D11F29BE5500381804 /* MatchesTableViewCell.swift */; };
+		89A9C9D41F29BE7300381804 /* MatchesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A9C9D31F29BE7300381804 /* MatchesTableViewController.swift */; };
+		89BCDECB1F2AB523006D4209 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BCDECA1F2AB523006D4209 /* Match.swift */; };
 		9DDA2D8969189677A9E5EC66 /* Pods_FindMyDate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D45447280D9E05690344212 /* Pods_FindMyDate.framework */; };
 		F8B5D96E851ECB2EC74E9100 /* Pods_FindMyDateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8050E5FABE3A75C5E342DBD3 /* Pods_FindMyDateTests.framework */; };
 /* End PBXBuildFile section */
@@ -73,6 +76,9 @@
 		8954E3151EFA5A5600197708 /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		89A9C9C01F0C307D00381804 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		89A9C9C21F0C3CB900381804 /* DateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
+		89A9C9D11F29BE5500381804 /* MatchesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesTableViewCell.swift; sourceTree = "<group>"; };
+		89A9C9D31F29BE7300381804 /* MatchesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesTableViewController.swift; sourceTree = "<group>"; };
+		89BCDECA1F2AB523006D4209 /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		BA7832D858012051BD6043B1 /* Pods-FindMyDateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyDateTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FindMyDateTests/Pods-FindMyDateTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,6 +169,7 @@
 				89A9C9C21F0C3CB900381804 /* DateViewController.swift */,
 				8954E12C1ED7D8D600197708 /* ViewController.swift */,
 				8954E30A1EF5E8B800197708 /* UserTableViewController.swift */,
+				89A9C9D31F29BE7300381804 /* MatchesTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -171,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				8954E30D1EF7C70E00197708 /* FirebaseUser.swift */,
+				89BCDECA1F2AB523006D4209 /* Match.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -179,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				8954E3151EFA5A5600197708 /* UserTableViewCell.swift */,
+				89A9C9D11F29BE5500381804 /* MatchesTableViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -528,9 +537,12 @@
 			files = (
 				8954E30E1EF7C70E00197708 /* FirebaseUser.swift in Sources */,
 				8954E12D1ED7D8D600197708 /* ViewController.swift in Sources */,
+				89BCDECB1F2AB523006D4209 /* Match.swift in Sources */,
 				8954E30B1EF5E8B800197708 /* UserTableViewController.swift in Sources */,
 				8954E12B1ED7D8D600197708 /* AppDelegate.swift in Sources */,
+				89A9C9D21F29BE5500381804 /* MatchesTableViewCell.swift in Sources */,
 				89A9C9C41F0C5DE500381804 /* DateViewController.swift in Sources */,
+				89A9C9D41F29BE7300381804 /* MatchesTableViewController.swift in Sources */,
 				8954E3161EFA5A5600197708 /* UserTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

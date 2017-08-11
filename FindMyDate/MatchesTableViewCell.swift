@@ -1,19 +1,16 @@
 //
-//  UserTableViewCell.swift
+//  MatchesTableViewCell.swift
 //  FindMyDate
 //
-//  Created by Chris Dean on 2017-06-21.
+//  Created by Chris Dean on 2017-07-26.
 //  Copyright © 2017 Chris Dean. All rights reserved.
 //
-import Firebase
+
 import UIKit
 
-class UserTableViewCell: UITableViewCell {
-    
-    
-    @IBOutlet weak var picHolder: UIImageView!
-    
-    //var user: FirebaseUser!
+class MatchesTableViewCell: UITableViewCell {
+
+    @IBOutlet weak var imageHolder: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
