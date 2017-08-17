@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3EDFFA8C1F14BB6A112A0DA0 /* Pods_FindMyDateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 702543273466D483B4C613E8 /* Pods_FindMyDateUITests.framework */; };
+		8914CB951F4555940067CD56 /* KolodaPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8914CB941F4555940067CD56 /* KolodaPhotoView.swift */; };
+		8914CB981F463FFB0067CD56 /* KolodaPhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8914CB971F463FFB0067CD56 /* KolodaPhotoView.xib */; };
 		8954E12B1ED7D8D600197708 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8954E12A1ED7D8D600197708 /* AppDelegate.swift */; };
 		8954E12D1ED7D8D600197708 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8954E12C1ED7D8D600197708 /* ViewController.swift */; };
 		8954E1301ED7D8D600197708 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8954E12E1ED7D8D600197708 /* Main.storyboard */; };
@@ -57,6 +59,8 @@
 		700BEEB8E927332C56155D99 /* Pods-FindMyDate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyDate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FindMyDate/Pods-FindMyDate.debug.xcconfig"; sourceTree = "<group>"; };
 		702543273466D483B4C613E8 /* Pods_FindMyDateUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindMyDateUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8050E5FABE3A75C5E342DBD3 /* Pods_FindMyDateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindMyDateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8914CB941F4555940067CD56 /* KolodaPhotoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KolodaPhotoView.swift; sourceTree = "<group>"; };
+		8914CB971F463FFB0067CD56 /* KolodaPhotoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KolodaPhotoView.xib; sourceTree = "<group>"; };
 		8954E1271ED7D8D600197708 /* FindMyDate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindMyDate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8954E12A1ED7D8D600197708 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8954E12C1ED7D8D600197708 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +116,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8914CB961F4560040067CD56 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8914CB941F4555940067CD56 /* KolodaPhotoView.swift */,
+				8914CB971F463FFB0067CD56 /* KolodaPhotoView.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		8954E11E1ED7D8D600197708 = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +150,7 @@
 		8954E1291ED7D8D600197708 /* FindMyDate */ = {
 			isa = PBXGroup;
 			children = (
+				8914CB961F4560040067CD56 /* Views */,
 				8954E31A1EFA5AC900197708 /* Other */,
 				8954E3191EFA5AB600197708 /* Supporting Files */,
 				8954E3181EFA5A7D00197708 /* Layouts */,
@@ -373,6 +387,7 @@
 				89A9C9C11F0C307D00381804 /* Images.xcassets in Resources */,
 				8954E1591ED7D9EA00197708 /* GoogleService-Info.plist in Resources */,
 				8954E1321ED7D8D600197708 /* Assets.xcassets in Resources */,
+				8914CB981F463FFB0067CD56 /* KolodaPhotoView.xib in Resources */,
 				8954E1301ED7D8D600197708 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -543,6 +558,7 @@
 				897B1F1A1F3D4C1C00BA7E3B /* MyKolodaViewController.swift in Sources */,
 				89BCDECB1F2AB523006D4209 /* Match.swift in Sources */,
 				8954E30B1EF5E8B800197708 /* UserTableViewController.swift in Sources */,
+				8914CB951F4555940067CD56 /* KolodaPhotoView.swift in Sources */,
 				8954E12B1ED7D8D600197708 /* AppDelegate.swift in Sources */,
 				89A9C9D21F29BE5500381804 /* MatchesTableViewCell.swift in Sources */,
 				89A9C9C41F0C5DE500381804 /* DateViewController.swift in Sources */,

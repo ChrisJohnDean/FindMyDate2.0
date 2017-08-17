@@ -57,6 +57,35 @@
             </objects>
             <point key="canvasLocation" x="-2479" y="-2014"/>
         </scene>
+        <!--My Koloda View Controller-->
+        <scene sceneID="WBe-Cl-6it">
+            <objects>
+                <viewController id="MWo-Zz-8Jx" customClass="MyKolodaViewController" customModule="FindMyDate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dZ6-Az-y9g"/>
+                        <viewControllerLayoutGuide type="bottom" id="WP6-tU-nQh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JnO-tf-1by">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jPH-ZE-KXt" customClass="KolodaView" customModule="Koloda">
+                                <rect key="frame" x="40" y="140" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7qk-aO-1Vk"/>
+                    <connections>
+                        <outlet property="kolodaView" destination="jPH-ZE-KXt" id="NFl-qg-paM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="btI-59-mvj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-519" y="-3043"/>
+        </scene>
         <!--Go Dating-->
         <scene sceneID="Jx9-8Z-skp">
             <objects>
@@ -207,7 +236,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="B9v-3H-Xu1" kind="relationship" relationship="rootViewController" id="ljQ-Cs-3yM"/>
+                        <segue destination="MWo-Zz-8Jx" kind="relationship" relationship="rootViewController" id="9sM-DD-9Rq"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y7Q-Tc-bqO" userLabel="First Responder" sceneMemberID="firstResponder"/>
