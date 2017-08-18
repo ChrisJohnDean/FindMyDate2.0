@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -69,13 +70,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jPH-ZE-KXt" customClass="KolodaView" customModule="Koloda">
-                                <rect key="frame" x="40" y="140" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jPH-ZE-KXt" customClass="CustomKolodaView" customModule="FindMyDate" customModuleProvider="target">
+                                <rect key="frame" x="51" y="158" width="219" height="253"/>
+                                <color key="backgroundColor" red="1" green="0.73039825169999995" blue="0.71974884610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="265" id="9et-9F-PSs"/>
+                                </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tv2-a3-uKG">
+                                <rect key="frame" x="65" y="422" width="75" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="thumbs-down-sign_1f44e.png"/>
+                                <connections>
+                                    <action selector="leftButtonTapped:" destination="MWo-Zz-8Jx" eventType="touchUpInside" id="eKD-xl-opf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vol-fz-eQ0">
+                                <rect key="frame" x="173" y="419" width="75" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="thumbs-up-sign_1f44d.png"/>
+                                <connections>
+                                    <action selector="rightButtonTapped:" destination="MWo-Zz-8Jx" eventType="touchUpInside" id="mjG-KB-MRX"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Go Dating!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4oS-dN-fBf">
+                                <rect key="frame" x="72" y="92" width="176" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="42"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.90098896930000005" blue="0.94300148770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WP6-tU-nQh" firstAttribute="top" secondItem="jPH-ZE-KXt" secondAttribute="bottom" constant="102" id="I3z-XI-clu"/>
+                            <constraint firstItem="jPH-ZE-KXt" firstAttribute="leading" secondItem="JnO-tf-1by" secondAttribute="leadingMargin" constant="29" id="Woh-X8-rDH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jPH-ZE-KXt" secondAttribute="trailing" constant="28" id="deK-0o-VTW"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7qk-aO-1Vk"/>
                     <connections>
@@ -84,7 +115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btI-59-mvj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-519" y="-3043"/>
+            <point key="canvasLocation" x="-519.375" y="-3043.3098591549297"/>
         </scene>
         <!--Go Dating-->
         <scene sceneID="Jx9-8Z-skp">
@@ -263,4 +294,8 @@
             <point key="canvasLocation" x="-1526" y="-1626"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="thumbs-down-sign_1f44e.png" width="120" height="120"/>
+        <image name="thumbs-up-sign_1f44d.png" width="120" height="120"/>
+    </resources>
 </document>

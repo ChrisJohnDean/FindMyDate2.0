@@ -11,11 +11,13 @@ import Koloda
 import Firebase
 import pop
 
+private let frameAnimationSpringBounciness: CGFloat = 9
+private let frameAnimationSpringSpeed: CGFloat = 16
 private var numberOfCards: Int = 5
 
 class MyKolodaViewController: UIViewController {
 
-    @IBOutlet weak var kolodaView: KolodaView!
+    @IBOutlet weak var kolodaView: CustomKolodaView!
     
     let storageRef = Storage.storage().reference(forURL: "gs://findmydate-1c6f4.appspot.com/")
     let usersRef = Database.database().reference(withPath: "users")
@@ -23,6 +25,7 @@ class MyKolodaViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //kolodaView.alphaValueSemiTransparent = kolodaAlphaValueSemiTransparent
         kolodaView.dataSource = self
         kolodaView.delegate = self// as? KolodaViewDelegate
         self.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
@@ -77,7 +80,25 @@ class MyKolodaViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBAction func leftButtonTapped(_ sender: Any) {
+        kolodaView?.swipe(SwipeResultDirection.left)
+        //self.view.bringSubview(toFront: leftButtonTapped)
+    }
+    
+    @IBAction func rightButtonTapped(_ sender: Any) {
+        kolodaView?.swipe(SwipeResultDirection.right)
+        var currentIndex = kolodaView.currentCardIndex
+        let Storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let DvC = Storyboard.instantiateViewController(withIdentifier: "DateViewController") as! DateViewController
+        DvC.user = self.users[currentIndex]
+        self.navigationController?.pushViewController(DvC, animated: true)
+        self.kolodaView.reloadData()
+        print("swiped right")
 
+        self.view.bringSubview(toFront: kolodaView)
+        
+    }
     
     /*
     // MARK: - Navigation
@@ -93,10 +114,50 @@ class MyKolodaViewController: UIViewController {
 
 extension MyKolodaViewController: KolodaViewDelegate {
     
-    func kolodaDidSwipedCardAtIndex(_ koloda: KolodaView, index: UInt, direction: SwipeResultDirection) {
-
-        //self.kolodaView.reloadData()
+    func kolodaDidSwipedCardAtIndex(_ koloda: KolodaView, index: Int, direction: SwipeResultDirection) {
+        
+        if direction == SwipeResultDirection.right {
+            let Storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let DvC = Storyboard.instantiateViewController(withIdentifier: "DateViewController") as! DateViewController
+            DvC.user = self.users[Int(index)]
+            self.navigationController?.pushViewController(DvC, animated: true)
+            //self.kolodaView.reloadData()
+            print("swiped right")
+        }
+        self.kolodaView.reloadData()
+        
     }
+    
+    func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
+        //Example: reloading
+        kolodaView.resetCurrentCardIndex()
+        fetchPhotos() {
+            (_: [FirebaseUser]) in
+            print("fetched urls")
+        }
+     
+    }
+    
+    func kolodaShouldApplyAppearAnimation(_ koloda: KolodaView) -> Bool {
+        return true
+    }
+    
+    func kolodaShouldMoveBackgroundCard(_ koloda: KolodaView) -> Bool {
+        return true
+    }
+    
+    func kolodaShouldTransparentizeNextCard(_ koloda: KolodaView) -> Bool {
+        return true
+    }
+    
+
+    func koloda(kolodaBackgroundCardAnimation koloda: KolodaView) -> POPPropertyAnimation? {
+        let animation = POPSpringAnimation(propertyNamed: kPOPViewFrame)
+        animation?.springBounciness = frameAnimationSpringBounciness
+        animation?.springSpeed = frameAnimationSpringSpeed
+        return animation
+    }
+    
 }
 
 extension MyKolodaViewController: KolodaViewDataSource {
