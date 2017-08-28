@@ -25,25 +25,15 @@ class MyKolodaViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //kolodaView.alphaValueSemiTransparent = kolodaAlphaValueSemiTransparent
+        
         kolodaView.dataSource = self
         kolodaView.delegate = self// as? KolodaViewDelegate
         self.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
-        //fetchPhotos(completion: <#([FirebaseUser]) -> ()#>)
-//        mapRegion { (region) in
-//            
-//            if let region = region {
-//                
-//                self.mapView.setRegion(region, animated: true)
-//            }
-//        }
-        //DispatchQueue.main.async(execute: { () -> Void in
-        //DispatchQueue.main.async(execute: { () -> Void in
-            fetchPhotos() {
-                (_: [FirebaseUser]) in
-                print("fetched urls")
-            }
-        //})
+        fetchPhotos() {
+            (_: [FirebaseUser]) in
+            print("fetched urls")
+        }
+
     }
     
 
@@ -83,20 +73,20 @@ class MyKolodaViewController: UIViewController {
     
     @IBAction func leftButtonTapped(_ sender: Any) {
         kolodaView?.swipe(SwipeResultDirection.left)
-        //self.view.bringSubview(toFront: leftButtonTapped)
+        
     }
     
     @IBAction func rightButtonTapped(_ sender: Any) {
-        kolodaView?.swipe(SwipeResultDirection.right)
-        var currentIndex = kolodaView.currentCardIndex
+        
+        var currentIndex = (kolodaView.currentCardIndex )
         let Storyboard = UIStoryboard(name: "Main", bundle: nil)
         let DvC = Storyboard.instantiateViewController(withIdentifier: "DateViewController") as! DateViewController
         DvC.user = self.users[currentIndex]
         self.navigationController?.pushViewController(DvC, animated: true)
-        self.kolodaView.reloadData()
+        //self.kolodaView.reloadData()
         print("swiped right")
-
-        self.view.bringSubview(toFront: kolodaView)
+        kolodaView?.swipe(SwipeResultDirection.right)
+        
         
     }
     
@@ -115,14 +105,20 @@ class MyKolodaViewController: UIViewController {
 extension MyKolodaViewController: KolodaViewDelegate {
     
     func kolodaDidSwipedCardAtIndex(_ koloda: KolodaView, index: Int, direction: SwipeResultDirection) {
-        
-        if direction == SwipeResultDirection.right {
+        print("ahh")
+        DispatchQueue.main.async() {
+        if direction == .right {
+            print("swiped right")
             let Storyboard = UIStoryboard(name: "Main", bundle: nil)
             let DvC = Storyboard.instantiateViewController(withIdentifier: "DateViewController") as! DateViewController
             DvC.user = self.users[Int(index)]
             self.navigationController?.pushViewController(DvC, animated: true)
             //self.kolodaView.reloadData()
             print("swiped right")
+//            DispatchQueue.main.async() {
+//                self.kolodaView.reloadData()
+//            }
+        }
         }
         self.kolodaView.reloadData()
         
