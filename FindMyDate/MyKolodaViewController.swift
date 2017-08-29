@@ -113,7 +113,7 @@ extension MyKolodaViewController: KolodaViewDelegate {
             let DvC = Storyboard.instantiateViewController(withIdentifier: "DateViewController") as! DateViewController
             DvC.user = self.users[Int(index)]
             self.navigationController?.pushViewController(DvC, animated: true)
-            //self.kolodaView.reloadData()
+            self.kolodaView.reloadData()
             print("swiped right")
 //            DispatchQueue.main.async() {
 //                self.kolodaView.reloadData()
