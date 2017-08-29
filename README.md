@@ -7,7 +7,7 @@
   
 ### Prerequisites
   Mac<br/>
-  iPhone
+  iPhone<br/>
   XCode
 
 ### Built With
