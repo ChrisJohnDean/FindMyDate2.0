@@ -10,6 +10,7 @@ target 'FindMyDate' do
     	pod 'Firebase/Auth'
 	pod 'Firebase/Database'
 	pod 'Firebase/Storage'
+	pod "Koloda"
     
     pod 'FBSDKLoginKit’
     pod 'FBSDKCoreKit’

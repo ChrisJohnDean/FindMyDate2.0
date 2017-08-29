@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="KolodaPhotoView" customModule="FindMyDate" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kkN-9K-pkd">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="306" id="ZPq-PI-OM3"/>
+                        <constraint firstAttribute="width" constant="375" id="zP7-Tn-wFT"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KZq-8t-Aja">
+                    <rect key="frame" x="0.0" y="600" width="375" height="67"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRI-Ca-OyK">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="375" id="IYI-QO-1HL"/>
+                                <constraint firstAttribute="height" constant="67" id="aG2-Vh-PeR"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="zRI-Ca-OyK" secondAttribute="bottom" id="2Vo-Aj-Lmn"/>
+                        <constraint firstItem="zRI-Ca-OyK" firstAttribute="leading" secondItem="KZq-8t-Aja" secondAttribute="leading" id="7OR-wf-3PW"/>
+                        <constraint firstAttribute="trailing" secondItem="zRI-Ca-OyK" secondAttribute="trailing" id="Qs2-GB-9RS"/>
+                        <constraint firstAttribute="trailing" secondItem="zRI-Ca-OyK" secondAttribute="trailing" id="SQm-LE-E7B"/>
+                        <constraint firstAttribute="bottom" secondItem="zRI-Ca-OyK" secondAttribute="bottom" id="h3V-Bj-VPE"/>
+                        <constraint firstItem="zRI-Ca-OyK" firstAttribute="leading" secondItem="KZq-8t-Aja" secondAttribute="leading" id="on9-1P-mQo"/>
+                        <constraint firstAttribute="height" constant="67" id="ux1-DB-Pn7"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="kkN-9K-pkd" secondAttribute="bottom" id="0wF-QF-F8D"/>
+                <constraint firstItem="KZq-8t-Aja" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="3oD-7X-cp6"/>
+                <constraint firstAttribute="trailing" secondItem="kkN-9K-pkd" secondAttribute="trailing" id="Nva-60-WtG"/>
+                <constraint firstAttribute="bottom" secondItem="KZq-8t-Aja" secondAttribute="bottom" id="R9n-fI-ndy"/>
+                <constraint firstAttribute="trailing" secondItem="KZq-8t-Aja" secondAttribute="trailing" id="UhR-Fg-EAz"/>
+                <constraint firstItem="kkN-9K-pkd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ZbH-5B-b6y"/>
+                <constraint firstItem="kkN-9K-pkd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="lTP-n9-dnc"/>
+            </constraints>
+            <connections>
+                <outlet property="photoImage" destination="kkN-9K-pkd" id="19a-dY-du9"/>
+                <outlet property="photoTitle" destination="zRI-Ca-OyK" id="ycf-zi-N1A"/>
+            </connections>
+            <point key="canvasLocation" x="34.5" y="59.5"/>
+        </view>
+    </objects>
+</document>
