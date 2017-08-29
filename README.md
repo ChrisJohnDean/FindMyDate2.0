@@ -3,9 +3,11 @@
   boom has largely overlooked.
 
 ### Getting Started
-  Open project in XCode and run the simulator for demo-able app. 
+  Open project in XCode and run app on an iPhone 5 or newer. 
   
 ### Prerequisites
+  Mac
+  iPhone
   XCode
 
 ### Built With
