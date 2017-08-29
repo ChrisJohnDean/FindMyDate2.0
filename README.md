@@ -6,7 +6,7 @@
   Open project in XCode and run app on an iPhone 5 or newer. 
   
 ### Prerequisites
-  Mac
+  Mac<br/>
   iPhone
   XCode
 
