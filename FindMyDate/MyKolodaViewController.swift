@@ -121,7 +121,7 @@ extension MyKolodaViewController: KolodaViewDelegate {
         }
         }
         self.kolodaView.reloadData()
-        self.kolodaView.reloadData()
+        
         
     }
     
