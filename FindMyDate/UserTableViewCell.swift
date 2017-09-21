@@ -12,8 +12,7 @@ class UserTableViewCell: UITableViewCell {
     
     
     @IBOutlet weak var picHolder: UIImageView!
-    
-    //var user: FirebaseUser!
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
