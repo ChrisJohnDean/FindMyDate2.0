@@ -1,6 +1,6 @@
 # FindMyDate
 
-![Screenshot](https://github.com/ChrisJohnDean/FindMyDate2.0/tree/master/images)
+![Screenshot](https://github.com/ChrisJohnDean/FindMyDate2.0/blob/master/images/IMG-8930.PNG)
 
   FindMyDate is in the coding and testing stages of development. Its focus is on a style of dating that the recent dating app
   boom has largely overlooked.
