@@ -72,8 +72,7 @@ class MyKolodaViewController: UIViewController {
     
     
     @IBAction func leftButtonTapped(_ sender: Any) {
-        kolodaView?.swipe(SwipeResultDirection.left)
-        
+        self.kolodaView?.swipe(SwipeResultDirection.left)
     }
     
     @IBAction func rightButtonTapped(_ sender: Any) {
@@ -86,6 +85,7 @@ class MyKolodaViewController: UIViewController {
         //self.kolodaView.reloadData()
         print("swiped right")
         kolodaView?.swipe(SwipeResultDirection.right)
+        self.kolodaView.reloadData()
         
         
     }
@@ -179,8 +179,8 @@ extension MyKolodaViewController: KolodaViewDataSource {
         return photoView!
     }
     
-    func koloda(koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {
-        return Bundle.main.loadNibNamed("OverlayView",
-                                                  owner: self, options: nil)?[0] as? OverlayView
-    }
+//    func koloda(koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {
+//        return Bundle.main.loadNibNamed("OverlayView",
+//                                                  owner: self, options: nil)?[0] as? OverlayView
+//    }
 }

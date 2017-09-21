@@ -10,9 +10,13 @@ import UIKit
 
 class AcceptedDateViewController: UIViewController {
 
+    @IBOutlet weak var acceptedView: AcceptedDateView!
+    var match: Match!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        acceptedView.location.text = match?.location
+        acceptedView.matchName.text = match?.suitorsName
         // Do any additional setup after loading the view.
     }
 

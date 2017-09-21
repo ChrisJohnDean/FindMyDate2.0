@@ -164,6 +164,7 @@ class MatchesTableViewController: UITableViewController {
         let AdVc = Storyboard.instantiateViewController(withIdentifier: "AcceptedDate") as! AcceptedDateViewController
         let match = dates[indexPath.row]
         DvC.match = dates[indexPath.row]
+        AdVc.match = dates[indexPath.row]
         if (!match.accepted) {
             self.navigationController?.pushViewController(DvC, animated: true)
         }
