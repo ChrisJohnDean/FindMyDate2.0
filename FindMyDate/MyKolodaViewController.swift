@@ -172,7 +172,21 @@ extension MyKolodaViewController: KolodaViewDataSource {
         let photoView = Bundle.main.loadNibNamed("KolodaPhotoView", owner: self, options: nil)?[0] as? KolodaPhotoView
         //var photoView: KolodaPhotoView?
         let user = users[Int(index)]
-        photoView?.photoImage?.imageFromURL(user.profileURL.absoluteString)
+        
+        let profilePicRef = self.storageRef.child(user.uid + "/profile_pic.jpg")
+        profilePicRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
+            if error != nil {
+                print("an error occurred when downloading profile picture from firebase storage")
+            } else {
+                let image = UIImage(data: data!)
+                photoView?.photoImage.image = image
+                //contentView.bringSubview(toFront: photoImage)
+                
+                //self.tableView.reloadData()
+            }
+        }
+        
+        //photoView?.photoImage?.imageFromURL(user.profileURL.absoluteString)
         photoView?.photoTitle?.text = user.name
         print(user.name)
         print(user.profileURL.absoluteString) 

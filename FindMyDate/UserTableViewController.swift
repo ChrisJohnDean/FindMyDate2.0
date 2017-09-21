@@ -134,16 +134,6 @@ class UserTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
-
-    //  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    //return currentUsers.count
-    //}
-
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -170,32 +160,12 @@ class UserTableViewController: UITableViewController {
                 
                 self.tableView.reloadData()
             }
-            
-//            guard let imageData = data, error == nil else {
-//                print("an error occurred when retrieving data form storage")
-//                return
-//            }
-//            guard let image = UIImage(data: imageData) else {
-//                print("an error occurred when downloading profile picture from firebase storage")
-//                return
-//            }
-//            cell.picHolder.image = image
-//            cell.contentView.bringSubview(toFront: cell.picHolder)
-//            self.tableView.reloadData()
         }
-        
         return cell
     }
 
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let cell = tableView.cellForRow(at: indexPath)
-//        tableView.deselectRow(at: indexPath, animated: true)
-//        
-//        performSegue(withIdentifier: "cellSegue", sender: cell)
-//    }
-
     
-    // Override to perform segue from selected user cell to as the user on a date
+    // Override to perform segue from selected user cell to ask the user on a date
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let Storyboard = UIStoryboard(name: "Main", bundle: nil)
         let DvC = Storyboard.instantiateViewController(withIdentifier: "DateViewController") as! DateViewController

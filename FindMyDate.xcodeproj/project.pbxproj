@@ -36,6 +36,9 @@
 		89A9C9D41F29BE7300381804 /* MatchesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A9C9D31F29BE7300381804 /* MatchesTableViewController.swift */; };
 		89B6A4251F7354D300E71854 /* cupid-transparent-300x204.png in Resources */ = {isa = PBXBuildFile; fileRef = 89B6A4241F7354D300E71854 /* cupid-transparent-300x204.png */; };
 		89B6A4271F73569500E71854 /* AcceptedDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B6A4261F73569500E71854 /* AcceptedDateView.swift */; };
+		89B6A42A1F73A2CF00E71854 /* Red-Broken-Heart-Clipart.png in Resources */ = {isa = PBXBuildFile; fileRef = 89B6A4281F73A2CF00E71854 /* Red-Broken-Heart-Clipart.png */; };
+		89B6A42B1F73A2CF00E71854 /* hearts-xxl.png in Resources */ = {isa = PBXBuildFile; fileRef = 89B6A4291F73A2CF00E71854 /* hearts-xxl.png */; };
+		89B6A42D1F73A53900E71854 /* 007380-blue-jelly-icon-arrows-arrow4-right.png in Resources */ = {isa = PBXBuildFile; fileRef = 89B6A42C1F73A53900E71854 /* 007380-blue-jelly-icon-arrows-arrow4-right.png */; };
 		89BA52DA1F6BCD17003F18E3 /* AcceptedDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BA52D91F6BCD17003F18E3 /* AcceptedDateViewController.swift */; };
 		89BCDECB1F2AB523006D4209 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BCDECA1F2AB523006D4209 /* Match.swift */; };
 		9DDA2D8969189677A9E5EC66 /* Pods_FindMyDate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D45447280D9E05690344212 /* Pods_FindMyDate.framework */; };
@@ -101,6 +104,9 @@
 		89A9C9D31F29BE7300381804 /* MatchesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesTableViewController.swift; sourceTree = "<group>"; };
 		89B6A4241F7354D300E71854 /* cupid-transparent-300x204.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cupid-transparent-300x204.png"; path = "../../../../Downloads/cupid-transparent-300x204.png"; sourceTree = "<group>"; };
 		89B6A4261F73569500E71854 /* AcceptedDateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptedDateView.swift; sourceTree = "<group>"; };
+		89B6A4281F73A2CF00E71854 /* Red-Broken-Heart-Clipart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Red-Broken-Heart-Clipart.png"; path = "../../../../Downloads/Red-Broken-Heart-Clipart.png"; sourceTree = "<group>"; };
+		89B6A4291F73A2CF00E71854 /* hearts-xxl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hearts-xxl.png"; path = "../../../../Downloads/hearts-xxl.png"; sourceTree = "<group>"; };
+		89B6A42C1F73A53900E71854 /* 007380-blue-jelly-icon-arrows-arrow4-right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "007380-blue-jelly-icon-arrows-arrow4-right.png"; path = "../../../../Downloads/007380-blue-jelly-icon-arrows-arrow4-right.png"; sourceTree = "<group>"; };
 		89BA52D91F6BCD17003F18E3 /* AcceptedDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptedDateViewController.swift; sourceTree = "<group>"; };
 		89BCDECA1F2AB523006D4209 /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		BA7832D858012051BD6043B1 /* Pods-FindMyDateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyDateTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FindMyDateTests/Pods-FindMyDateTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +154,9 @@
 		8914CB9A1F4666DB0067CD56 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				89B6A42C1F73A53900E71854 /* 007380-blue-jelly-icon-arrows-arrow4-right.png */,
+				89B6A4281F73A2CF00E71854 /* Red-Broken-Heart-Clipart.png */,
+				89B6A4291F73A2CF00E71854 /* hearts-xxl.png */,
 				89B6A4241F7354D300E71854 /* cupid-transparent-300x204.png */,
 				897EDD4A1F57D5C600788575 /* yes.png */,
 				897EDD481F57D5AB00788575 /* no.png */,
@@ -419,10 +428,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8914CB9E1F4667740067CD56 /* thumbs-up-sign_1f44d.png in Resources */,
+				89B6A42B1F73A2CF00E71854 /* hearts-xxl.png in Resources */,
 				8954E1351ED7D8D600197708 /* LaunchScreen.storyboard in Resources */,
 				8914CB9D1F4667740067CD56 /* thumbs-down-sign_1f44e.png in Resources */,
 				89A9C9C11F0C307D00381804 /* Images.xcassets in Resources */,
+				89B6A42D1F73A53900E71854 /* 007380-blue-jelly-icon-arrows-arrow4-right.png in Resources */,
 				8954E1591ED7D9EA00197708 /* GoogleService-Info.plist in Resources */,
+				89B6A42A1F73A2CF00E71854 /* Red-Broken-Heart-Clipart.png in Resources */,
 				89B6A4251F7354D300E71854 /* cupid-transparent-300x204.png in Resources */,
 				897EDD4B1F57D5C600788575 /* yes.png in Resources */,
 				8954E1321ED7D8D600197708 /* Assets.xcassets in Resources */,
