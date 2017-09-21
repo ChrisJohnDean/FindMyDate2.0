@@ -21,9 +21,10 @@ class MatchesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("yo")
+//        
         self.user = FirebaseUser(authData: Auth.auth().currentUser!)
-
+//
         //usersRef.observe(.childAdded, with: { snap in
         //let snapValue = snap.value as? NSDictionary
         
@@ -36,19 +37,80 @@ class MatchesTableViewController: UITableViewController {
 //            self.tableView.insertRows(at: [indexPath], with: .top)
 //            self.tableView.reloadData()
 //        })
-        
+//        
         datesRef.child(self.user.uid).observe(.childAdded, with: { snap in
-            guard let snapValue = snap.value as? [String: String] else {return}
-            let match = Match(suitorsName: snapValue["Suitor's Name"]!, suitorsUid: snapValue["Suitor's Uid"]!, location: snapValue["location"]!)
+            guard let snapValue = snap.value as? [String: Any] else {return}
+            print("yo2")
+            let match = Match(suitorsName: snapValue["Suitor's Name"]! as! String, suitorsUid: snapValue["Suitor's Uid"]! as! String, location: snapValue["location"]! as! String, accepted: snapValue["Accepted"]! as! Bool)
+            print("yo3")
             self.dates.append(match)
             let row = self.dates.count - 1
             let indexPath = IndexPath(row: row, section: 0)
             self.tableView.insertRows(at: [indexPath], with: .top)
             self.tableView.reloadData()
+            //print("yo3")
         })
+
+//        
+        datesRef.child(self.user.uid).observe(.childChanged, with: { snap in
+            guard let snapValue = snap.value as? [String: Any] else {return}
+            let key = snap.key
+            
+            if let index = self.dates.index(where: {$0.suitorsUid == key}) {
+                self.dates.remove(at: index)
+                self.tableView.reloadData()
+            }
+            //self.tableView.reloadData()
+            let match = Match(suitorsName: snapValue["Suitor's Name"]! as! String , suitorsUid: snapValue["Suitor's Uid"]! as! String, location: snapValue["location"]! as! String, accepted: snapValue["Accepted"]! as! Bool)
+            self.dates.append(match)
+            let row = self.dates.count - 1
+            let indexPath = IndexPath(row: row, section: 0)
+            //self.dates.remove(at: row)
+//            self.tableView.reloadRows(at: [indexPath], with: .top)
+            self.tableView.insertRows(at: [indexPath], with: .top)
+            self.tableView.reloadData()
+        })
+//        datesRef.removeAllObservers()
+       
+//
+//        datesRef.observe(.childRemoved, with: { snapshot in
+//            if let index = self.dates.index(where: {$0.key == snapshot.key}) {
+//                self.dates.remove(at: index) //remove it from the array via the index
+//                self.tableView.reloadUI()
+//            } else {
+//                print("item not found")
+//            }
+//        })
+        
+        datesRef.observe(.childRemoved, with: { snap in
+            let key = snap.key
+            
+            if let index = self.dates.index(where: {$0.suitorsUid == key}) {
+                self.dates.remove(at: index)
+                self.tableView.reloadData()
+            }
+        })
+        //self.tableView.reloadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+//        self.user = FirebaseUser(authData: Auth.auth().currentUser!)
+//
+//        datesRef.child(self.user.uid).observe(.childChanged, with: { snap in
+//            guard let snapValue = snap.value as? [String: String] else {return}
+//            let match = Match(suitorsName: snapValue["Suitor's Name"]!, suitorsUid: snapValue["Suitor's Uid"]!, location: snapValue["location"]!)
+//            self.dates.append(match)
+//            let row = self.dates.count - 1
+//            let indexPath = IndexPath(row: row, section: 0)
+//            self.tableView.insertRows(at: [indexPath], with: .top)
+//            //self.tableView.reloadData()
+//        })
+//        datesRef.removeAllObservers()
+//        self.tableView.reloadData()
+
         self.tableView.reloadData()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -95,6 +157,23 @@ class MatchesTableViewController: UITableViewController {
         return cell
     }
  
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //self.tableView.reloadData()
+        let Storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let DvC = Storyboard.instantiateViewController(withIdentifier: "YesOrNoViewController") as! YesOrNoViewController
+        let AdVc = Storyboard.instantiateViewController(withIdentifier: "AcceptedDate") as! AcceptedDateViewController
+        let match = dates[indexPath.row]
+        DvC.match = dates[indexPath.row]
+        if (!match.accepted) {
+            self.navigationController?.pushViewController(DvC, animated: true)
+        }
+        if match.accepted {
+            self.navigationController?.pushViewController(AdVc, animated: true)
+        }
+        self.tableView.reloadData()
+        
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.

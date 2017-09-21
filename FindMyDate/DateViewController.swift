@@ -21,6 +21,7 @@ class DateViewController: UIViewController {
     let datesRef = Database.database().reference(withPath: "dates")
     let usersRef = Database.database().reference(withPath: "users")
     var place: String!
+    var accepted: Bool = false
     
     
     override func viewDidLoad() {
@@ -51,7 +52,7 @@ class DateViewController: UIViewController {
             print(place)
             print(suitorsUid)
             print(suitorsName)
-            self.datesRef.child((self.user?.uid)!).child(suitorsUid).setValue(["location": place, "Suitor's Name": suitorsName, "Suitor's Uid": suitorsUid])
+            self.datesRef.child((self.user?.uid)!).child(suitorsUid).setValue(["location": place, "Suitor's Name": suitorsName, "Suitor's Uid": suitorsUid, "Accepted": accepted])
             self.navigationController?.popViewController(animated: true)
         }
         else {

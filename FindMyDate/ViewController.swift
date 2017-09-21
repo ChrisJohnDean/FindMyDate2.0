@@ -22,6 +22,10 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         loginButton.frame = CGRect(x: 16, y: 250, width: view.frame.width - 32, height: 50)
         loginButton.delegate = self
         loginButton.readPermissions = ["email", "public_profile"]
+//        if (FBSDKAccessToken.current()) != nil {
+//            // User is logged in, use 'accessToken' here.
+//            performSegue(withIdentifier: "loginSegue", sender: nil)
+//        }
     }
 
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
@@ -47,9 +51,11 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                     return
                 }
             }
+
             performSegue(withIdentifier: "loginSegue", sender: nil)
         }
-        
+        let loginManager = FBSDKLoginManager()
+        loginManager.logOut()
     }
 }
 

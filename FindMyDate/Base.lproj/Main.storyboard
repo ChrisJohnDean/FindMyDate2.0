@@ -115,7 +115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btI-59-mvj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-519.375" y="-3043.3098591549297"/>
+            <point key="canvasLocation" x="-564" y="-2350"/>
         </scene>
         <!--Go Dating-->
         <scene sceneID="Jx9-8Z-skp">
@@ -154,7 +154,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZnV-6A-ub7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-528.75" y="-2350.3521126760565"/>
+            <point key="canvasLocation" x="-564" y="-3065"/>
         </scene>
         <!--Date View Controller-->
         <scene sceneID="KQD-4c-gdY">
@@ -214,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XhO-pZ-2tL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="232.5" y="-2350.3521126760565"/>
+            <point key="canvasLocation" x="300" y="-2350"/>
         </scene>
         <!--Dates-->
         <scene sceneID="n1L-eb-zR7">
@@ -253,7 +253,110 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZCH-aQ-SFm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-529" y="-1627"/>
+            <point key="canvasLocation" x="-564" y="-1212"/>
+        </scene>
+        <!--Yes Or No View Controller-->
+        <scene sceneID="udg-Dy-iOY">
+            <objects>
+                <viewController storyboardIdentifier="YesOrNoViewController" id="IPE-bn-glq" customClass="YesOrNoViewController" customModule="FindMyDate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vb5-V3-0fg"/>
+                        <viewControllerLayoutGuide type="bottom" id="O5a-am-kHM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kpb-i9-Cai">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Suitor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lwj-N1-KEH">
+                                <rect key="frame" x="89" y="67" width="142" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;wants to go on a date with you?&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBq-7S-4yu">
+                                <rect key="frame" x="49" y="98" width="222" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="where at?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxo-i4-ZD4">
+                                <rect key="frame" x="111" y="167" width="98" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RkD-vi-UDw">
+                                <rect key="frame" x="69" y="196" width="182" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hellz no!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhQ-2f-Kqc">
+                                <rect key="frame" x="42" y="313" width="88" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yup" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEK-nk-LZg">
+                                <rect key="frame" x="219" y="313" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFF-s3-X3D">
+                                <rect key="frame" x="42" y="350" width="90" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="no.png"/>
+                                <connections>
+                                    <action selector="no:" destination="IPE-bn-glq" eventType="touchUpInside" id="B3M-Ic-l1f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YaM-Nh-1fA">
+                                <rect key="frame" x="172" y="342" width="148" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="yes.png">
+                                    <color key="titleColor" red="1" green="0.90098896930000005" blue="0.94300148770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="1" green="0.90098896930000005" blue="0.94300148770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="yes:" destination="IPE-bn-glq" eventType="touchUpInside" id="Alo-OQ-XTH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.90098896930000005" blue="0.94300148770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="location" destination="RkD-vi-UDw" id="lwP-qD-ARo"/>
+                        <outlet property="suitor" destination="lwj-N1-KEH" id="OTw-gW-7nz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JL9-L5-6He" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="300" y="-1627.8169014084508"/>
+        </scene>
+        <!--Accepted Date View Controller-->
+        <scene sceneID="war-Mg-cDr">
+            <objects>
+                <viewController storyboardIdentifier="AcceptedDate" id="23X-XK-myZ" customClass="AcceptedDateViewController" customModule="FindMyDate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Efg-v8-Gui"/>
+                        <viewControllerLayoutGuide type="bottom" id="XMF-29-MLz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nEB-aa-w23">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qWU-EJ-xIe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="319" y="-912"/>
         </scene>
         <!--Go Dating-->
         <scene sceneID="K3c-nA-7UL">
@@ -295,7 +398,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="no.png" width="147" height="120"/>
         <image name="thumbs-down-sign_1f44e.png" width="120" height="120"/>
         <image name="thumbs-up-sign_1f44d.png" width="120" height="120"/>
+        <image name="yes.png" width="214" height="120"/>
     </resources>
 </document>
