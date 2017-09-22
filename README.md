@@ -7,11 +7,7 @@
 
 ![Screenshot](/images/IMG-8930.PNG) 
 
-![Screenshot](/images/IMG-8929.PNG) 
-
-![Screenshot](/images/IMG-8926.PNG) 
-
-![Screenshot](/images/IMG-8927.PNG)  
+![Screenshot](/images/IMG-8929.PNG)   
 
 ### Getting Started
   Open project in XCode and run the simulator for demo-able app. 
