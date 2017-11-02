@@ -5,8 +5,8 @@
 
 ### Screenshots
 
-![Screenshot](/images/IMG_9019.PNG) ![Screenshot](/images/IMG-8929.PNG)
-                  ![Screenshot](/images/IMG-8931.PNG)
+![Screenshot](/images/IMG_9019.PNG) ![Screenshot](/images/IMG_9018.PNG)
+                  ![Screenshot](/images/IMG_9017.PNG)
 
 ### Getting Started
   Open project in XCode and run the simulator for demo-able app. 
