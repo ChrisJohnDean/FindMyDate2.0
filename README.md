@@ -18,3 +18,4 @@
   - Swift 3
   - XCode 8
   - Firebase
+  - Facebook SDK
